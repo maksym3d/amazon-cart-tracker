@@ -1,0 +1,28 @@
+{
+    "email": {
+        "smtp_url": "smtp.gmail.com",
+        "smtp_port": 465,
+        "decode_account_info": false,
+    	"environment_key": "OUR_KEY",
+        "user": "gmail_user_name",
+        "password": "gmail_user_password"
+    },
+    "amazon": {
+    	"decode_account_info": false,
+    	"environment_key": "OUR_KEY",
+    	"user": "amazon_user_name",
+    	"password": "amazon_user_password",
+    	"cookiefile": "cookies.txt",
+    	"outfolderhtml": "html",
+    	"writeoutfiles": false,
+    	"url": {
+    		"base": "https://www.amazon.com",
+    		"logout": "https://www.amazon.com/gp/sign-in.html/ref=ord_cart_unrec_signin?ie=UTF8&path=%2Fgp%2Fcart%2Fview.html%2Fref%3D%3Fie%3DUTF8%26app-nav-type%3Dnone%26dc%3Ddf&useRedirectOnSuccess=1",
+    		"cart": "https://www.amazon.com/gp/cart/view.html/ref=nav_crt_ewc_hd",
+    		"product": "https://www.amazon.com/dp/",
+    		"more": "https://www.amazon.com/gp/cart/ajax-load-list.html/ref=ox_sc_inf_saved-for-later_COUNTER"
+    	}
+    },
+    "mindifference": 0.5,
+    "datafile": "data.json"
+}
