@@ -168,13 +168,14 @@ def init_from_login(config):
     for header in sign_in_headers:
         request.add_header(*header)
         
-    for cookie in cj:
-        print cookie.name, cookie.value, cookie.domain
-    print "------", sign_in_url, sign_in_data
     resp = opener.open(request)
     s = resp.read()
+    
+    logged_in = False
     for cookie in cj:
-        print cookie.name, cookie.value, cookie.domain
+        if cookie.name == "x-main": logged_in = True
+    if not logged_in:
+        raise Exception("Failed to login. Please check login info")
     
     if config['writeoutfiles']: write_str_to_file(config['outfolderhtml'] + '/' + '0.html', s)
     save_cookies_lwp(cj, config['cookiefile'])
